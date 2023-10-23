@@ -1,16 +1,19 @@
 package me.dio.creditapplicationsystem.entity
 
+import jakarta.persistence.*
 import me.dio.creditapplicationsystem.enummeration.Status
 import java.math.BigDecimal
 import java.time.LocalDate
 import java.util.UUID
 
-data class Credit (
-    val creditCode: UUID = UUID.randomUUID(),
-    val crediteValue: BigDecimal = BigDecimal.ZERO,
-    val dayFristInstallment: LocalDate,
-    val numberOfInstallment: Int = 0,
-    val status: Status = Status.IN_PROGRESS,
-    val costumer: Costumer? = null,
-    val id: Long? = null
-    )
+@Entity
+//@Table(name = "Credit")
+data class Credit(
+    @Column(nullable = false, unique = true) val creditCode: UUID = UUID.randomUUID(),
+    @Column(nullable = false) val crediteValue: BigDecimal = BigDecimal.ZERO,
+    @Column(nullable = false) val dayFristInstallment: LocalDate,
+    @Column(nullable = false) val numberOfInstallment: Int = 0,
+    @Enumerated val status: Status = Status.IN_PROGRESS,
+    @ManyToOne val customer: Customer? = null,
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long? = null
+)
