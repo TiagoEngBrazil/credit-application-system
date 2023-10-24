@@ -1,7 +1,7 @@
-package me.dio.creditapplicationsystem.Repository
+package me.dio.creditapplicationsystem.repository
 
 import me.dio.creditapplicationsystem.entity.Customer
 import org.springframework.data.jpa.repository.JpaRepository
 
-interface CustomRepository: JpaRepository<Customer, Long> {
+interface CustomerRepository: JpaRepository<Customer, Long> {
 }
