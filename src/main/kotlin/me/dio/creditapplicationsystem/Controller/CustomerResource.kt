@@ -5,7 +5,7 @@ import me.dio.creditapplicationsystem.Dto.CustomerDto
 import me.dio.creditapplicationsystem.Dto.CustomerUpdateDto
 import me.dio.creditapplicationsystem.Dto.CustomerView
 import me.dio.creditapplicationsystem.entity.Customer
-import me.dio.creditapplicationsystem.sevice.impl.CustomerService
+import me.dio.creditapplicationsystem.service.impl.CustomerService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

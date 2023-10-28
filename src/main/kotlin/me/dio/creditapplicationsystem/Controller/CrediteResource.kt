@@ -5,7 +5,7 @@ import me.dio.creditapplicationsystem.Dto.CreditDto
 import me.dio.creditapplicationsystem.Dto.CreditView
 import me.dio.creditapplicationsystem.Dto.CreditViewList
 import me.dio.creditapplicationsystem.entity.Credit
-import me.dio.creditapplicationsystem.sevice.impl.CreditService
+import me.dio.creditapplicationsystem.service.impl.CreditService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -34,7 +34,7 @@ class CrediteResource(
         return ResponseEntity.status(HttpStatus.OK).body(creditViewList)
     }
 
-    @GetMapping("/{creditCode}")
+    @GetMapping("{creditCode}")
     fun finByCreditCode(
         @RequestParam(value = "customerId") customerId: Long,
         @PathVariable creditCode: UUID

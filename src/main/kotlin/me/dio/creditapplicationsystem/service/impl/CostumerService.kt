@@ -1,9 +1,9 @@
-package me.dio.creditapplicationsystem.sevice.impl
+package me.dio.creditapplicationsystem.service.impl
 
 import me.dio.creditapplicationsystem.Exception.BusinessException
 import me.dio.creditapplicationsystem.entity.Customer
 import me.dio.creditapplicationsystem.repository.CustomerRepository
-import me.dio.creditapplicationsystem.sevice.IcustomerService
+import me.dio.creditapplicationsystem.service.IcustomerService
 import org.springframework.stereotype.Service
 
 @Service
