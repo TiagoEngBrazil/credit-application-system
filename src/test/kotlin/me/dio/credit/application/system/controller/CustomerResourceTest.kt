@@ -183,7 +183,11 @@ class CustomerResourceTest {
     @Test
     fun `should not delete customer by id and return 400 status`() {
         //given
-        val invaidId: Long = 1000
+        val invaidId = Random.Default.nextLong() // (nova forma de gerar um número "randomico" nas versões atuais do Kotlin)
+
+//       val invaidId = Random().nextLong() (Aparentemente, essa forma de gerar um número "randomico" foi descontinuada
+//        nas novas versões do Kotlin)
+
         //when
         //then
         mockMvc.perform(
@@ -230,7 +234,7 @@ class CustomerResourceTest {
     @Test
     fun `should not update a customer with invalid id and return 400 status`() {
         //given
-        val invaidId = 1000L
+        val invaidId = Random.Default.nextLong()
         val customerUpdateDto: CustomerUpdateDto = builderCustomerUpdateDto()
         val valueAsString: String = objectMapper.writeValueAsString(customerUpdateDto)
         //when
