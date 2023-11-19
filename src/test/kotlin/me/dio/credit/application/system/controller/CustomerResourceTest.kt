@@ -122,7 +122,7 @@ class CustomerResourceTest {
     }
 
     @Test
-    fun `should find customer by id and return 200 as status`() {
+    fun `should find customer by id and return 200 status`() {
         //given
         val customer: Customer = customerRepository.save(builderCustomerDto().toEntity())
 
@@ -145,7 +145,7 @@ class CustomerResourceTest {
     }
 
     @Test
-    fun `should not find customer with invalid id and return 400 as status`() {
+    fun `should not find customer with invalid id and return 400 status`() {
         //given
         val invalidId: Long = 2L
         //when
@@ -167,7 +167,7 @@ class CustomerResourceTest {
     }
 
     @Test
-    fun `should delete customer by id and return 204 as status`() {
+    fun `should delete customer by id and return 204 status`() {
         //given
         val customer: Customer = customerRepository.save(builderCustomerDto().toEntity())
         //when
@@ -181,7 +181,7 @@ class CustomerResourceTest {
     }
 
     @Test
-    fun `should not delete customer by id and return 400 as status`() {
+    fun `should not delete customer by id and return 400 status`() {
         //given
         val invaidId: Long = 1000
         //when
@@ -203,7 +203,7 @@ class CustomerResourceTest {
     }
 
     @Test
-    fun `should update a customer and return 200 as status`() {
+    fun `should update a customer and return 200 status`() {
         //given
         val customer: Customer = customerRepository.save(builderCustomerDto().toEntity())
         val customerUpdateDto: CustomerUpdateDto = builderCustomerUpdateDto()
@@ -228,7 +228,7 @@ class CustomerResourceTest {
     }
 
     @Test
-    fun `should not update a customer with invalid id and return 400 as status`() {
+    fun `should not update a customer with invalid id and return 400 status`() {
         //given
         val invaidId = 1000L
         val customerUpdateDto: CustomerUpdateDto = builderCustomerUpdateDto()

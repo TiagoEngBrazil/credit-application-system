@@ -1,0 +1,79 @@
+[33mcommit 1b4b3fa5a789f46f9856901bc729d13744c64645[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Sun Nov 19 16:59:44 2023 -0300
+
+    "Testes refeitos e tentando criar a class CreditResourceTest!"
+
+[33mcommit 17a797b44cc23ef2db24844c79fe449df6a03696[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Sun Nov 19 16:43:30 2023 -0300
+
+    "Testes refeitos e tentando criar a class CreditResourceTest!"
+
+[33mcommit 316769a7e7d1d9b22f902e14294061b26a3fe636[m
+Author: Tiago Lima Pimenta <102493965+TiagoEngBrazil@users.noreply.github.com>
+Date:   Tue Nov 14 11:58:23 2023 -0300
+
+    Update README.md
+
+[33mcommit daa3646513c2ed79cb405fdf5b73e0d90d26a452[m
+Author: Tiago Lima Pimenta <102493965+TiagoEngBrazil@users.noreply.github.com>
+Date:   Tue Nov 14 11:57:11 2023 -0300
+
+    Update README.md
+
+[33mcommit 43eca06829f546b0e7fa403b529237de812d268c[m
+Author: Tiago Lima Pimenta <102493965+TiagoEngBrazil@users.noreply.github.com>
+Date:   Tue Nov 14 11:56:08 2023 -0300
+
+    Create README.md
+    
+    add-Readme
+
+[33mcommit f27e9972cc348645932d4592c32bd56e9aaf2201[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Fri Oct 27 22:06:24 2023 -0300
+
+    "test implementations!!"
+
+[33mcommit 2285e72b81867e73dc8b5c8199fb473661c09282[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Thu Oct 26 19:30:36 2023 -0300
+
+    "tratamento de excessões e finalization!!"
+
+[33mcommit 3aadad9936976f0aa250d8e4ff37d94375c5b389[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Thu Oct 26 10:32:22 2023 -0300
+
+    "Banco de dados criado! Faltando validações"
+
+[33mcommit 0c7c0020dfffc577794456f51241291026c9875d[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Tue Oct 24 21:33:57 2023 -0300
+
+    "Add-pakageDtoAnd Some files"
+
+[33mcommit 5f3de8f859d3680498a93d8a736acbe876ca45bf[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Mon Oct 23 21:13:20 2023 -0300
+
+    "Add model classes!"
+
+[33mcommit 4cd06ac9121ef24790b2028c87059291c41732b8[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Sun Oct 22 21:17:20 2023 -0300
+
+    Create-Repository
+
+[33mcommit 26c7a98252373b3f01dff7b00f4bef25a245d801[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Sun Oct 22 13:24:17 2023 -0300
+
+    "Add model classes!"
+
+[33mcommit 99066aa1ff2f4a41197a1f2dc4163b28c8996ca0[m
+Author: B owie <tiago.pimenta@ucsal.edu.br>
+Date:   Sun Oct 22 12:34:42 2023 -0300
+
+    add-repository
