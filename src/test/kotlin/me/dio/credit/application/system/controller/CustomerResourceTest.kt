@@ -7,7 +7,6 @@ import me.dio.credit.application.system.entity.Customer
 import me.dio.credit.application.system.repository.CustomerRepository
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.ClassOrderer
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
@@ -21,7 +20,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 import java.math.BigDecimal
 import kotlin.random.Random
-import kotlin.random.nextLong
+//import java.util.Random
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -147,7 +146,7 @@ class CustomerResourceTest {
     @Test
     fun `should not find customer with invalid id and return 400 status`() {
         //given
-        val invalidId: Long = 2L
+        val invalidId = 2L
         //when
         //then
         mockMvc.perform(
@@ -183,15 +182,17 @@ class CustomerResourceTest {
     @Test
     fun `should not delete customer by id and return 400 status`() {
         //given
-        val invaidId = Random.Default.nextLong() // (nova forma de gerar um número "randomico" nas versões atuais do Kotlin)
 
-//       val invaidId = Random().nextLong() (Aparentemente, essa forma de gerar um número "randomico" foi descontinuada
-//        nas novas versões do Kotlin)
+// Há 2 formas de gerar números "randomicos" em Kotlin:
+
+        val invalidId = Random.nextLong() // (Usando essa forma é preciso fazer o import "import kotlin.random.Random")
+
+//        val invalidId = Random().nextLong() // (Já usando essa forma é preciso fazer o import "import java.util.Random")
 
         //when
         //then
         mockMvc.perform(
-            MockMvcRequestBuilders.delete("$URL/${invaidId}")
+            MockMvcRequestBuilders.delete("$URL/${invalidId}")
                 .accept(MediaType.APPLICATION_JSON)
         )
             .andExpect(MockMvcResultMatchers.status().isBadRequest)
@@ -234,13 +235,13 @@ class CustomerResourceTest {
     @Test
     fun `should not update a customer with invalid id and return 400 status`() {
         //given
-        val invaidId = Random.Default.nextLong()
+        val invalidId = Random.nextLong()
         val customerUpdateDto: CustomerUpdateDto = builderCustomerUpdateDto()
         val valueAsString: String = objectMapper.writeValueAsString(customerUpdateDto)
         //when
         //then
         mockMvc.perform(
-            MockMvcRequestBuilders.patch("$URL?customerId=${invaidId}")
+            MockMvcRequestBuilders.patch("$URL?customerId=${invalidId}")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(valueAsString)
         )
